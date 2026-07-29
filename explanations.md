@@ -96,7 +96,7 @@ I admit, I'm biased. I was always of the camp that code comments are a last reso
 
 **Agents aren't people**
 
-We need to accept that agents are not responsible with code comments: not in writing them well, not in maintaining them well, not in scrutinizing them well, and not in interpreting them well. Agent's orate the code. Read your agent's comments. If you find an AI-generated comment that adds value beyond an explanation of what nearby code is doing (or allegedly supposed to be doing) then I'll eat my shirt. As for the value in making dense code easier to read, this argument collapses entirely when the reader of your code is an LLM who can read code as easily as english — if not more easily — and with superhuman accuracy. And if you are intending to not only read all of the code your agents produce but also to understand that code via its comments, then you should probably stop reading here.
+We need to accept that agents are not responsible with code comments: not in writing them well, not in maintaining them well, not in scrutinizing them well, and not in interpreting them well. Agents orate the code. Read your agents' comments. If you find an AI-generated comment that adds value beyond an explanation of what nearby code is doing (or allegedly supposed to be doing) then I'll eat my shirt. As for the value in making dense code easier to read, this argument collapses entirely when the reader of your code is an LLM who can read code as easily as english — if not more easily — and with superhuman accuracy. And if you are intending to not only read all of the code your agents produce but also to understand that code via its comments, then you should probably stop reading here.
 
 **The problems with comments**
 
