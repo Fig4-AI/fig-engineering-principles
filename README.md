@@ -123,7 +123,7 @@ claude --dangerously-skip-permissions
 ```
 
 > [!TIP]
-> Then go do whatever you want. Check in later to see if the work is done or there's a question for you.
+> Then go do whatever you want. Check in later to see if the work is done or if there's a question for you.
 
 ## Install
 
