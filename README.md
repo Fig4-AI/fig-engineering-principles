@@ -37,7 +37,7 @@ You will get, by far, the most value out of these skills when you:
 </td>
 <td valign="top">
 
-- Tell agents **how** to do their work. Tell them what to do, don't micromanage.
+- Tell agents **how** to do their work. They only need to know what to do; don't micromanage.
 - Provide excessive explanation, esp in the form of long documents. Distill external documentation to its critical information and provide only that. Agents cannot tell what information is most important.
 - Prescribe every detail of a task. This is wasteful, and will result in bloat.
 - Prescribe what not to do. Do not preempt their failures unless there is an absolutely critical reason to do so. Agents will waste tokens producing code and docs about it. If you want something to be invisible, you must keep it invisible yourself.
@@ -48,26 +48,26 @@ You will get, by far, the most value out of these skills when you:
 
 ## The Problem
 
-We've all seen it, but I'll spell out the cascade. Agents are literally designed to output text. They lean into this behavior by default, leaping ahead with wrong assumptions, poor designs, and stuff you didn't ask for. This problem compounds. Each new agent reads the bloated code from its predecessors; using more input tokens. It has to process longer and harder to understand the nonsense it's ingested; using more thinking tokens. Then its work needs to cover an overly complex surface of cases, features, and states that never needed to exist in the first place; creating more output tokens. This cascade is what encumbers contexts, grows code bases like algae in a fake pond, and causes token costs to explode whenever you even whisper the words "vibe coding."
+> [!POOR QUALITY]
+> We've all seen it, but I'll spell out the cascade. Agents are literally designed to output text. They lean into this behavior by default, leaping ahead with wrong assumptions, poor designs, and stuff you didn't ask for. This problem compounds. Each new agent reads the bloated code from its predecessors; using more input tokens. It has to process longer and harder to understand the nonsense it's ingested; using more thinking tokens. Then its work needs to cover an overly complex surface of cases, features, and states that never needed to exist in the first place; creating more output tokens. This cascade is what encumbers contexts, grows code bases like algae in a fake pond, and causes token costs to explode whenever you even whisper the words "vibe coding."
 
 ## The Thesis
 
-> [!TIP]
+> [!💪 FOUNDATION]
 > By emphasizing principles of software engineering that great engineers already use to mitigate tech debt, distilled into language that specifically targets the ways AI agents wander astray of those principles, agents will write the right code, and by definition produce less, minimize complexity, and cost less over time.
 
 ## Motivation
 
-I devised these skills from obsessing over how to get more out of AI coding agents nearly round the clock for six months. My view is and was that AI coding tools aren't worth it, no matter how amazing the tech is, if I'm trapped at my desk the same number of hours a day. And the singular determining factor trapping me at my desk is whether or not I expect agents to produce code that is at least good _enough_. My bar is high (very) so it's been a real struggle.
+> [!I HATE BABYSITTING]
+> I devised these skills from obsessing over how to get more out of AI coding agents nearly round the clock for six months. My view is and was that AI coding tools aren't worth it, no matter how amazing the tech is, if I'm trapped at my desk the same number of hours a day. And the singular determining factor trapping me at my desk is whether or not I expect agents to produce code that is at least good _enough_. My bar is high (very) so it's been a real struggle.
 
 > [!IMPORTANT]
 > The vast majority of my waking hours in 2026 have been tirelessly dedicated to understanding coding agent's failures, and how to modify their behavior effectively. You can read about my experience of doing that work and the insights behind these rules in the [explanations.md](explanations.md) file. I strongly encourage everyone to do so.
 
 ## Metrics
 
-Measurements are tricky. Cherry picking a prompt and showing how little code it writes compared to vanilla agents or other skills isn't the quality of proof I want to deliver.
-
-> [!NOTE]
-> Creating standards for code complexity measurements, autonomy benchmarks, and measuring how token budget metrics are related to the aforementioned are all on my roadmap, so stay tuned.
+> [!COMING SOON]
+> Measurements are tricky. Cherry picking a prompt and showing how little code it writes compared to vanilla agents or other skills isn't the quality of proof I want to deliver. Creating standards for code complexity measurements, autonomy benchmarks, and measuring how token budget metrics are related to the aforementioned are all on my roadmap, so stay tuned.
 
 ## The skills
 
