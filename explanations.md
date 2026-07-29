@@ -92,7 +92,7 @@ I love this one! Seems highly opinionated, but bear with me, I'll break it down.
 
 **The value of comments**
 
-I admit, I'm biased. I was always of the camp that code comments are a last resort and that code should be self-explanatory. But as an old-timey engineer, writing code with my own two fingers, I still wrote comments. Comments can add value, give insight or provide citations. Good comments help whoever is reading code understand it better than they would have understood it if they had simply read — or even ran — the code. Now there is another argument, one I personally don't agree with but that I will state because even with my biases against it I can admit there are at least some circumstances where it hold water. Code comments can make dense code more tractable to read.
+I admit, I'm biased. I was always of the camp that code comments are a last resort and that code should be self-explanatory. But as an old-timey engineer, writing code with my own two fingers, I still wrote comments. Comments can add value, give insight or provide citations. Good comments help whoever is reading code understand it better than they would have understood it if they had simply read — or even ran — the code. Now there is another argument, one I personally don't agree with but that I will state because even with my biases against it I can admit there are at least some circumstances where it hold water: code comments can make dense code more tractable to read.
 
 **Agents aren't people**
 
