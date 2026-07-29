@@ -90,15 +90,15 @@ Note: This has to be carefully worded so as not to beckon bells and whistles.
 
 I love this one! Seems highly opinionated, but bear with me, I'll break it down.
 
-### The value of comments
+**The value of comments**
 
 I admit, I'm biased. I was always of the camp that code comments are a last resort and that code should be self-explanatory. But as an old-timey engineer, writing code with my own two fingers, I still wrote comments. Comments can add value, give insight or provide citations. Good comments help whoever is reading code understand it better than they would have understood it if they had simply read — or even ran — the code. Now there is another argument, one I personally don't agree with but that I will state because even with my biases against it I can admit there are at least some circumstances where it hold water. Code comments can make dense code more tractable to read.
 
-### Agents aren't people
+**Agents aren't people**
 
 We need to accept that agents are not responsible with code comments: not in writing them well, not in maintaining them well, not in scrutinizing them well, and not in interpreting them well. Agent's orate the code. Read your agent's comments. If you find an AI-generated comment that adds value beyond an explanation of what nearby code is doing (or allegedly supposed to be doing) then I'll eat my shirt. As for the value in making dense code easier to read, this argument collapses entirely when the reader of your code is an LLM who can read code as easily as english — if not more easily — and with superhuman accuracy. And if you are intending to not only read all of the code your agents produce but also to understand that code via its comments, then you should probably stop reading here.
 
-### The problems with comments
+**The problems with comments**
 
 > "Talk is cheap. Show me the code.” -Linus Torvalds
 
@@ -111,11 +111,11 @@ Code comments are 'talk.' They don't really say what the code does, only the cod
 
 I have seen all of the above, many times, across every type of software engineering work I've had agents do (billions of tokens worth). I have tried to enforce rules about what makes good comments or when to use comments and when not to. My initial inclination was not to ban them entirely. But, the wasted effort got redirected into considering each comment against the rules, rather than saved by virtue of agents writing fewer comments; **Unless the rule is none, they write a lot.**
 
-### Your tokens
+**Your tokens**
 
 None of this is to mention that you're going to save a meaningful chunk on entire categories of token use. If 10% of all the code agents write is comments (check your codebase, I'll be it's more than 10%, maybe a lot more), that equates to a meaningful % of output tokens, input tokens, thinking tokens, and even some cache tokens.
 
-### "F@$%ING"
+**"F@$%ING"**
 
 Last I want to address the expletive. Sure it's unprofessional, but it's not for you. All of this is targeted agent behavior modification. I gotta tell you, I NEVER see code comments with the expletive. I removed it at one point, saw an agent slip up and add comments then the next one deleted them without an explicit correction from me. But I figured, why waste those tokens? Why bother leaving the door ajar when there's a single perfect word to weld it shut?
 
