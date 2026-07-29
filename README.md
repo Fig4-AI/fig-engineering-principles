@@ -60,7 +60,7 @@ We've all seen it, but I'll spell out the cascade. Agents are literally designed
 ## The Thesis
 
 <table>
-<tr><th align="left">💪&nbsp;&nbsp;Foundation</th></tr>
+<tr><th align="left">💪&nbsp;&nbsp;Principles == Quality</th></tr>
 <tr><td>
 
 By emphasizing principles of software engineering that great engineers already use to mitigate tech debt, distilled into language that specifically targets the ways AI agents wander astray of those principles, agents will write the right code, and by definition produce less, minimize complexity, and cost less over time.
