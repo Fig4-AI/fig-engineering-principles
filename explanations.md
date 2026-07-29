@@ -88,15 +88,36 @@ Note: This has to be carefully worded so as not to beckon bells and whistles.
 2. ABSOLUTELY NO CODE COMMENTS! NONE! FUCKING EVER!
 ```
 
-I love this one! Seems highly opinionated, but bear with me.
+I love this one! Seems highly opinionated, but bear with me, I'll break it down.
 
-I've had endless trouble with agent's code comments. They drift. They're often taken to be the authoritative truth of what the code does when they really can't be. Even when they're read by agents with adequate skepticism, it causes the agent to go run laps through the test suite to confirm the comment's correctness. It's a nightmare on every level. I think this aligns with Linus Torvalds' quote, "Talk is cheap. Show me the code.” Well, code comments are 'talk.' They don't really say what the code does, only the code can do that. For a comment to truly and faithfully express what the code is doing, it would need to be character-for-character identical to the code.
+### The value of comments
 
-I admit, I'm biased. I was always of the camp that code comments are a last resort and that code should be self-explanatory. But as an old-timey engineer, writing code with my own two fingers, I still wrote comments sometimes. They're a serious value add when used properly. [NASA's Power 10 Rules](https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code) (which I drew heavy conceptual inspiration from) enforce code comments, and who am I to oppose the wisdom of the people who are writing code for space exploration? Well, I'm a guy not writing code for space exploration. I'm not even trying to write code myself anymore. And we need to accept that agents cannot write comments responsibly. If you really think there is information critical enough to store as a comment, I would strongly argue it would be even better preserved in a doc.
+I admit, I'm biased. I was always of the camp that code comments are a last resort and that code should be self-explanatory. But as an old-timey engineer, writing code with my own two fingers, I still wrote comments. Comments can add value, give insight or provide citations. Good comments help whoever is reading code understand it better than they would have understood it if they had simply read — or even ran — the code. Now there is another argument, one I personally don't agree with but that I will state because even with my biases against it I can admit there are at least some circumstances where it hold water. Code comments can make dense code more tractable to read.
 
-Now I want to address the expletive. Sure it's unprofessional, but it's not for you. All of this is targeted agent behavior modification, and I gotta tell you. I NEVER see code comments with the expletive. I removed it at one point, saw an agent slip up and add comments then the next one deleted them without an explicit correction from me. But I figured, why waste those tokens? Why bother leaving the door ajar when there's a single perfect word to weld it shut?
+### Agents aren't people
 
-And none of this is to mention that you're gonna save at least 10% (I've seen as high as 30%!) just on your input tokens.
+We need to accept that agents are not responsible with code comments: not in writing them well, not in maintaining them well, not in scrutinizing them well, and not in interpreting them well. Agent's orate the code. Read your agent's comments. If you find an AI-generated comment that adds value beyond an explanation of what nearby code is doing (or allegedly supposed to be doing) then I'll eat my shirt. As for the value in making dense code easier to read, this argument collapses entirely when the reader of your code is an LLM who can read code as easily as english — if not more easily — and with superhuman accuracy. And if you are intending to not only read all of the code your agents produce but also to understand that code via its comments, then you should probably stop reading here.
+
+### The problems with comments
+
+> "Talk is cheap. Show me the code.” -Linus Torvalds
+
+Code comments are 'talk.' They don't really say what the code does, only the code can truly do that. For a comment to faithfully express what code is doing, it would need to be character-for-character identical to said code. This leads to the categorical ways comments cause problems drift/staleness & misinterpretation, and thusly the following bad behavior:
+
+- Agents trust comments which fail to adequately explain the meaning, purpose, or even behavior of nearby code. Wrong assumptions lead to mistakes.
+- Agents misinterpret comments, either directly or in their implications, leading to unnecessary work or unnecessarily complex work.
+- Agents find a comment that has drifted, potentially drifted, or has become stale, so they stop doing their actual work to go fix it.
+- Agents read a comment with adequate skepticism so they stop doing their actual work to go confirm the comment's assertions.
+
+I have seen all of the above, many times, across every type of software engineering work I've had agents do (billions of tokens worth). I have tried to enforce rules about what makes good comments or when to use comments and when not to. My initial inclination was not to ban them entirely. But, the wasted effort got redirected into considering each comment against the rules, rather than saved by virtue of agents writing fewer comments; **Unless the rule is none, they write a lot.**
+
+### Your tokens
+
+None of this is to mention that you're going to save a meaningful chunk on entire categories of token use. If 10% of all the code agents write is comments (check your codebase, I'll be it's more than 10%, maybe a lot more), that equates to a meaningful % of output tokens, input tokens, thinking tokens, and even some cache tokens.
+
+### "F@$%ING"
+
+Last I want to address the expletive. Sure it's unprofessional, but it's not for you. All of this is targeted agent behavior modification. I gotta tell you, I NEVER see code comments with the expletive. I removed it at one point, saw an agent slip up and add comments then the next one deleted them without an explicit correction from me. But I figured, why waste those tokens? Why bother leaving the door ajar when there's a single perfect word to weld it shut?
 
 ```
 3. ALL delegated tasks MUST be expressed in terms of bare requirements. Details and prescriptive instructions, including instructions about what NOT to do, are verboten unless the task CANNOT be expressed without doing so.
