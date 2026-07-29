@@ -144,7 +144,7 @@ Tools that read an `AGENTS.md` (Codex, etc.): copy [principles.md](principles.md
 
 </details>
 
-<details>
+<details open>
 <summary><strong>🔌 Claude Code plugin</strong></summary>
 
 <br>
@@ -156,7 +156,7 @@ Tools that read an `AGENTS.md` (Codex, etc.): copy [principles.md](principles.md
 
 </details>
 
-<details>
+<details open>
 <summary><strong>🌐 curl</strong></summary>
 
 <br>
@@ -169,7 +169,7 @@ Installs the `/fig` and `/fig-workflow` skills and the `/fig-agent` subagent int
 
 </details>
 
-<details>
+<details open>
 <summary><strong>📦 npm</strong></summary>
 
 <br>
