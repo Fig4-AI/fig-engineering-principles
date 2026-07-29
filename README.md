@@ -105,9 +105,12 @@ The principles themselves are in [principles.md](principles.md).
 
 ## Orchestration
 
+> [!NOTE]
+> The Fig orchestrator is coming soon. It will be free to use.
+
 The Fig orchestrator uses very similar skills to these internally. It also contains all kinds of machinery ranging from obvious to fancy to make your experience of using coding agents as amazing as possible!
 
-That aside, if you don't feel comfortable dipping your toes into an orchestrator yet (even though it's free-to-use), I'm giving you the basic premise of what Fig would do for you with the above skills.
+I'm giving you the basics of what Fig would do for you with the above skills.
 
 I recommend using them in the following way:
 
