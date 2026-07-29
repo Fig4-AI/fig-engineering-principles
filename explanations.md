@@ -104,7 +104,7 @@ We need to accept that agents are not responsible with code comments: not in wri
 
 Code comments are 'talk.' They don't really say what the code does, only the code can truly do that. For a comment to faithfully express what code is doing, it would need to be character-for-character identical to said code. This leads to the categorical ways comments cause problems drift/staleness & misinterpretation, and thusly the following bad behavior:
 
-- Agents trust comments which fail to adequately explain the meaning, purpose, or even behavior of nearby code. Wrong assumptions lead to mistakes.
+- Agents trust comments which fail to adequately explain the meaning, purpose, context, or even behavior of nearby code. Wrong assumptions lead to mistakes.
 - Agents misinterpret comments, either directly or in their implications, leading to unnecessary work or unnecessarily complex work.
 - Agents find a comment that has drifted, potentially drifted, or has become stale, so they stop doing their actual work to go fix it.
 - Agents read a comment with adequate skepticism so they stop doing their actual work to go confirm the comment's assertions.
