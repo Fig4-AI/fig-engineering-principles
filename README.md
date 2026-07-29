@@ -48,26 +48,50 @@ You will get, by far, the most value out of these skills when you:
 
 ## The Problem
 
-> [!POOR QUALITY]
-> We've all seen it, but I'll spell out the cascade. Agents are literally designed to output text. They lean into this behavior by default, leaping ahead with wrong assumptions, poor designs, and stuff you didn't ask for. This problem compounds. Each new agent reads the bloated code from its predecessors; using more input tokens. It has to process longer and harder to understand the nonsense it's ingested; using more thinking tokens. Then its work needs to cover an overly complex surface of cases, features, and states that never needed to exist in the first place; creating more output tokens. This cascade is what encumbers contexts, grows code bases like algae in a fake pond, and causes token costs to explode whenever you even whisper the words "vibe coding."
+<table>
+<tr><th align="left">📉&nbsp;&nbsp;Poor quality</th></tr>
+<tr><td>
+
+We've all seen it, but I'll spell out the cascade. Agents are literally designed to output text. They lean into this behavior by default, leaping ahead with wrong assumptions, poor designs, and stuff you didn't ask for. This problem compounds. Each new agent reads the bloated code from its predecessors; using more input tokens. It has to process longer and harder to understand the nonsense it's ingested; using more thinking tokens. Then its work needs to cover an overly complex surface of cases, features, and states that never needed to exist in the first place; creating more output tokens. This cascade is what encumbers contexts, grows code bases like algae in a fake pond, and causes token costs to explode whenever you even whisper the words "vibe coding."
+
+</td></tr>
+</table>
 
 ## The Thesis
 
-> [!💪 FOUNDATION]
-> By emphasizing principles of software engineering that great engineers already use to mitigate tech debt, distilled into language that specifically targets the ways AI agents wander astray of those principles, agents will write the right code, and by definition produce less, minimize complexity, and cost less over time.
+<table>
+<tr><th align="left">💪&nbsp;&nbsp;Foundation</th></tr>
+<tr><td>
+
+By emphasizing principles of software engineering that great engineers already use to mitigate tech debt, distilled into language that specifically targets the ways AI agents wander astray of those principles, agents will write the right code, and by definition produce less, minimize complexity, and cost less over time.
+
+</td></tr>
+</table>
 
 ## Motivation
 
-> [!I HATE BABYSITTING]
-> I devised these skills from obsessing over how to get more out of AI coding agents nearly round the clock for six months. My view is and was that AI coding tools aren't worth it, no matter how amazing the tech is, if I'm trapped at my desk the same number of hours a day. And the singular determining factor trapping me at my desk is whether or not I expect agents to produce code that is at least good _enough_. My bar is high (very) so it's been a real struggle.
+<table>
+<tr><th align="left">🍼&nbsp;&nbsp;I hate babysitting</th></tr>
+<tr><td>
+
+I devised these skills from obsessing over how to get more out of AI coding agents nearly round the clock for six months. My view is and was that AI coding tools aren't worth it, no matter how amazing the tech is, if I'm trapped at my desk the same number of hours a day. And the singular determining factor trapping me at my desk is whether or not I expect agents to produce code that is at least good _enough_. My bar is high (very) so it's been a real struggle.
+
+</td></tr>
+</table>
 
 > [!IMPORTANT]
 > The vast majority of my waking hours in 2026 have been tirelessly dedicated to understanding coding agent's failures, and how to modify their behavior effectively. You can read about my experience of doing that work and the insights behind these rules in the [explanations.md](explanations.md) file. I strongly encourage everyone to do so.
 
 ## Metrics
 
-> [!COMING SOON]
-> Measurements are tricky. Cherry picking a prompt and showing how little code it writes compared to vanilla agents or other skills isn't the quality of proof I want to deliver. Creating standards for code complexity measurements, autonomy benchmarks, and measuring how token budget metrics are related to the aforementioned are all on my roadmap, so stay tuned.
+<table>
+<tr><th align="left">⏳&nbsp;&nbsp;Coming soon</th></tr>
+<tr><td>
+
+Measurements are tricky. Cherry picking a prompt and showing how little code it writes compared to vanilla agents or other skills isn't the quality of proof I want to deliver. Creating standards for code complexity measurements, autonomy benchmarks, and measuring how token budget metrics are related to the aforementioned are all on my roadmap, so stay tuned.
+
+</td></tr>
+</table>
 
 ## The skills
 
