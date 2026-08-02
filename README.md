@@ -98,6 +98,8 @@
 >
 > `/fig-workflow` Complete the jira epic EN-1234 parallelizing where the work suits it.
 
+</details>
+
 ## Tips for using these skills
 
 You will get, by far, the most value out of these skills when you:
