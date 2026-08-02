@@ -18,10 +18,75 @@
 
 ---
 
-## Example uses
+## Install
 
-#### Load `/fig` whenever you start a new session. Review PRs, make small changes, and ask questions about your codebase.
-#### After you've loaded `/fig`, reach for `/fig-workflow` when you want a large engineering task done with high quality autonomously: design + implementation in one task, a ticket, even an epic (reccomended).
+<details open>
+<summary><strong>🌐 curl</strong></summary>
+
+<br>
+
+```
+curl -fsSL https://raw.githubusercontent.com/abelmcelroy/fig-engineering-principles/main/install/install.sh | sh
+```
+
+Installs the `/fig` and `/fig-workflow` skills and the `/fig-agent` subagent into `~/.claude/`.
+
+</details>
+
+<details open>
+<summary><strong>📦 npm</strong></summary>
+
+<br>
+
+```
+npx fig-engineering-principles
+```
+
+Same — the `/fig` and `/fig-workflow` skills and the `/fig-agent` subagent.
+
+</details>
+
+<details open>
+<summary><strong>🔌 Claude Code plugin</strong></summary>
+
+<br>
+
+```
+/plugin marketplace add abelmcelroy/fig-engineering-principles
+/plugin install fig@fig-principles
+```
+
+</details>
+
+<details open>
+<summary><strong>📋 Copy-paste</strong></summary>
+
+<br>
+
+| Copy | To |
+| --- | --- |
+| [`skills/fig/SKILL.md`](skills/fig/SKILL.md) | `~/.claude/skills/fig/SKILL.md` |
+| [`skills/fig-workflow/SKILL.md`](skills/fig-workflow/SKILL.md) | `~/.claude/skills/fig-workflow/SKILL.md` |
+| [`agents/fig-agent.md`](agents/fig-agent.md) | `~/.claude/agents/fig-agent.md` |
+
+Tools that read an `AGENTS.md` (Codex, etc.): copy [principles.md](principles.md) into your project's `AGENTS.md`.
+
+</details>
+
+## The skills
+
+| Skill | What it does | When to invoke
+| --- | --- | --- |
+| **`/fig`** | Makes agents better engineers | Session start |
+| **`/fig-workflow`** | Orchestrated workflow for engineering tasks | When you want high quality engineering done autonomously |
+| **`/fig-agent`** | Subagent with the same engineering principles | N/A: your agents will know when |
+
+> [!TIP]
+> Use `/fig` to review PRs, make small changes, and ask questions about your codebase.
+> 
+> Use `/fig-workflow` to design + implement in one task, ship ticket, even ship an epic (recommended).
+
+## Examples
 
 <details>
 <summary><strong>1 &nbsp;·&nbsp; Clear a PR review, end to end</strong></summary>
@@ -102,7 +167,11 @@
 
 ## Tips for using these skills
 
-You will get, by far, the most value out of these skills when you:
+> [!CAUTION]
+> These skills are for software engineering tasks: system design, implementation, testing, debugging, review, or refactoring.
+
+> [!WARNING]
+> Don't Micromanage!
 
 <table>
 <tr>
@@ -120,8 +189,8 @@ You will get, by far, the most value out of these skills when you:
 </td>
 <td valign="top">
 
-- Tell agents **how** to do their work. They only need to know what to do; don't micromanage.
-- Provide excessive explanation, esp in the form of long documents. Distill external documentation to its critical information and provide only that. Agents cannot tell what information is most important.
+- Tell agents **how** to do their work. They only need to know what to do.
+- Provide excessive explanation, esp in the form of long documents. Distill external documentation first. Agents cannot tell what's important.
 - Prescribe every detail of a task. This is wasteful, and will result in bloat.
 - Prescribe what not to do. Do not preempt their failures unless there is an absolutely critical reason to do so. Agents will waste tokens producing code and docs about it. If you want something to be invisible, you must keep it invisible yourself.
 
@@ -176,94 +245,20 @@ Measurements are tricky. Cherry picking a prompt and showing how little code it 
 </td></tr>
 </table>
 
-## The skills
-
-| Skill | What it does |
-| --- | --- |
-| **`/fig`** | The core principles. Recommended at the top of every session. |
-| **`/fig-workflow`** | A basic orchestration workflow to squeeze maximal quality and autonomy out of those principles. |
-| **`/fig-agent`** | An agent built with those same principles; integral to the workflow above. |
-
-The principles themselves are in [principles.md](principles.md).
-
 ## Orchestration
 
-> [!NOTE]
-> The Fig orchestrator is coming soon. It will be free to use.
+> [!IMPORTANT]
+> The [Fig orchestrator](https://www.fig4.ai) is coming soon. It will be free to use.
 
 The Fig orchestrator uses very similar skills to these internally. It also contains all kinds of machinery ranging from obvious to fancy to make your experience of using coding agents as amazing as possible!
 
-I'm giving you the basics of what Fig would do for you with the above skills.
-
-I recommend using them in the following way:
-
-```bash
-cd $PROJECT_DIR
-claude --dangerously-skip-permissions
-/fig
-/fig-workflow <your task description goes here>
-<conversation with agent clarifying their understanding of the goals of the work>
-```
-
 > [!TIP]
-> Then go do whatever you want. Check in later to see if the work is done or if there's a question for you.
-
-## Install
-
-Pick one:
-
-<details open>
-<summary><strong>📋 Copy-paste</strong></summary>
-
-<br>
-
-| Copy | To |
-| --- | --- |
-| [`skills/fig/SKILL.md`](skills/fig/SKILL.md) | `~/.claude/skills/fig/SKILL.md` |
-| [`skills/fig-workflow/SKILL.md`](skills/fig-workflow/SKILL.md) | `~/.claude/skills/fig-workflow/SKILL.md` |
-| [`agents/fig-agent.md`](agents/fig-agent.md) | `~/.claude/agents/fig-agent.md` |
-
-Tools that read an `AGENTS.md` (Codex, etc.): copy [principles.md](principles.md) into your project's `AGENTS.md`.
-
-</details>
-
-<details open>
-<summary><strong>🔌 Claude Code plugin</strong></summary>
-
-<br>
-
-```
-/plugin marketplace add abelmcelroy/fig-engineering-principles
-/plugin install fig@fig-principles
-```
-
-</details>
-
-<details open>
-<summary><strong>🌐 curl</strong></summary>
-
-<br>
-
-```
-curl -fsSL https://raw.githubusercontent.com/abelmcelroy/fig-engineering-principles/main/install/install.sh | sh
-```
-
-Installs the `/fig` and `/fig-workflow` skills and the `/fig-agent` subagent into `~/.claude/`.
-
-</details>
-
-<details open>
-<summary><strong>📦 npm</strong></summary>
-
-<br>
-
-```
-npx fig-engineering-principles
-```
-
-Same — the `/fig` and `/fig-workflow` skills and the `/fig-agent` subagent.
-
-</details>
+> I'm giving you the basics of what Fig would do for you with the above skills. If you like them and want:
+> - Spending visibility
+> - Work visibility
+> - Budget controls
+> - More parallelization
+> - Better quality
 
 ## General Claude Code Advice
 
