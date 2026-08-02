@@ -18,11 +18,12 @@
 
 ---
 
-## Examples
+## Example uses
 
-Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the task is big enough to want orchestration.
+#### Load `/fig` whenever you start a new session. Review PRs, make small changes, and ask questions about your codebase.
+#### After you've loaded `/fig`, reach for `/fig-workflow` when you want a large engineering task done with high quality autonomously: design + implementation in one task, a ticket, even an epic (reccomended).
 
-<details open>
+<details>
 <summary><strong>1 &nbsp;·&nbsp; Clear a PR review, end to end</strong></summary>
 
 <br>
@@ -33,7 +34,7 @@ Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the ta
 
 </details>
 
-<details open>
+<details>
 <summary><strong>2 &nbsp;·&nbsp; Ship a ticket</strong></summary>
 
 <br>
@@ -44,7 +45,7 @@ Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the ta
 
 </details>
 
-<details open>
+<details>
 <summary><strong>3 &nbsp;·&nbsp; Three tickets at once, in parallel worktrees</strong></summary>
 
 <br>
@@ -55,8 +56,8 @@ Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the ta
 
 </details>
 
-<details open>
-<summary><strong>4 &nbsp;·&nbsp; Put the principles underneath your own skills</strong></summary>
+<details>
+<summary><strong>4 &nbsp;·&nbsp; Combine the principles with your own skills</strong></summary>
 
 <br>
 
@@ -66,7 +67,7 @@ Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the ta
 
 </details>
 
-<details open>
+<details>
 <summary><strong>5 &nbsp;·&nbsp; Audit an epic against its PRD</strong></summary>
 
 <br>
@@ -77,8 +78,8 @@ Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the ta
 
 </details>
 
-<details open>
-<summary><strong>6 &nbsp;·&nbsp; Port an app in, to your conventions</strong></summary>
+<details>
+<summary><strong>6 &nbsp;·&nbsp; Port a demo to production</strong></summary>
 
 <br>
 
@@ -88,7 +89,16 @@ Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the ta
 
 </details>
 
-## How to Use The Skills
+<details>
+<summary><strong>5 &nbsp;·&nbsp; Ship an entire epic</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> `/fig-workflow` Complete the jira epic EN-1234 parallelizing where the work suits it.
+
+## Tips for using these skills
 
 You will get, by far, the most value out of these skills when you:
 
