@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+  <a href="#examples">Examples</a> ·
   <a href="#how-to-use-the-skills">How to use</a> ·
   <a href="#the-skills">The skills</a> ·
   <a href="#orchestration">Orchestration</a> ·
@@ -16,6 +17,76 @@
 </p>
 
 ---
+
+## Examples
+
+Load `/fig` first, then say what you want. Reach for `/fig-workflow` when the task is big enough to want orchestration.
+
+<details open>
+<summary><strong>1 &nbsp;·&nbsp; Clear a PR review, end to end</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> look at github PR 123. Implement fixes for all the blocking findings, and any cheap, quick wins on the deferrable findings. Anything deferrable that's not a quick win, make a jira ticket under epic EN-1234 and assign it to me. Use a worktree to not interrupt my current branch. Commit, push, then reply to the PR comments, and prune the worktree.
+
+</details>
+
+<details open>
+<summary><strong>2 &nbsp;·&nbsp; Ship a ticket</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> `/fig-workflow` jira ticket EN-1234
+
+</details>
+
+<details open>
+<summary><strong>3 &nbsp;·&nbsp; Three tickets at once, in parallel worktrees</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> `/fig-workflow` use 3 separate worktrees to implement jira tickets EN-1234, EN-1235, EN-1236, then open PRs to development. Assign me, and request Alice and Bob as reviewers. Prune the worktrees when you're finished.
+
+</details>
+
+<details open>
+<summary><strong>4 &nbsp;·&nbsp; Put the principles underneath your own skills</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> `/custom-code-review-skill` github PR 1234
+
+</details>
+
+<details open>
+<summary><strong>5 &nbsp;·&nbsp; Audit an epic against its PRD</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> audit jira epic EN-1234 as compared to the PRD at somewhere.atlassian.net/wiki/spaces/EN/pages/12345/project+PRD and make tickets for any gaps we missed
+
+</details>
+
+<details open>
+<summary><strong>6 &nbsp;·&nbsp; Port an app in, to your conventions</strong></summary>
+
+<br>
+
+> `/fig`
+>
+> `/fig-workflow` Port the demo app found at ~/Documents/code/demo-app into the current repo, matching our team code conventions in .claude/principles - make sure the app is fully WCAG accessible. This is going to be used as a proof of concept for a meeting next week, so needs to be a clean foundation we can iterate on.
+
+</details>
 
 ## How to Use The Skills
 
