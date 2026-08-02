@@ -3,6 +3,8 @@ name: fig-workflow
 description: Fig's workflow, designed to maximize quality and autonomy in tandem with Fig's engineering principles
 ---
 
+<IMPORTANT>IF THE `/fig` SKILL HAS **NOT** BEEN INVOKED THIS SESSION WARN THE USER AND RECOMMEND THEY START A NEW SESSION WITH `/fig` BEFORE USING THIS WORKFLOW, OTHERWISE IGNORE THIS LINE!</IMPORTANT>
+
 <--- ================================= ---->
 <--- ===== Engineering Workflow ====== ---->
 <--- ================================= ---->
