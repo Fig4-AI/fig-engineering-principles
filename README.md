@@ -155,7 +155,7 @@ Tools that read an `AGENTS.md` (Codex, etc.): copy [principles.md](principles.md
 </details>
 
 <details>
-<summary><strong>5 &nbsp;·&nbsp; Ship an entire epic</strong></summary>
+<summary><strong>7 &nbsp;·&nbsp; Ship an entire epic</strong></summary>
 
 <br>
 
