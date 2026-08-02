@@ -8,11 +8,11 @@
 </p>
 
 <p align="center">
-  <a href="#examples">Examples</a> ·
-  <a href="#how-to-use-the-skills">How to use</a> ·
-  <a href="#the-skills">The skills</a> ·
-  <a href="#orchestration">Orchestration</a> ·
   <a href="#install">Install</a> ·
+  <a href="#the-skills">The skills</a> ·
+  <a href="#examples">Examples</a> ·
+  <a href="#tips-for-using-these-skills">Tips</a> ·
+  <a href="#orchestration">Orchestration</a> ·
   <a href="#license">License</a>
 </p>
 
