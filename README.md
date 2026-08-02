@@ -248,17 +248,14 @@ Measurements are tricky. Cherry picking a prompt and showing how little code it 
 ## Orchestration
 
 > [!IMPORTANT]
-> The [Fig orchestrator](https://www.fig4.ai) is coming soon. It will be free to use.
-
-The Fig orchestrator uses very similar skills to these internally. It also contains all kinds of machinery ranging from obvious to fancy to make your experience of using coding agents as amazing as possible!
-
-> [!TIP]
-> I'm giving you the basics of what Fig would do for you with the above skills. If you like them and want:
+> The [Fig orchestrator](https://www.fig4.ai) is coming soon:
+> - **Free** to use!
+> - Use your own Anthropic account
 > - Spending visibility
 > - Work visibility
 > - Budget controls
-> - More parallelization
-> - Better quality
+> - Easier parallelization
+> - Even better quality
 
 ## General Claude Code Advice
 
