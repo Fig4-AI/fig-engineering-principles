@@ -12,6 +12,7 @@
   <a href="#the-skills">The skills</a> ·
   <a href="#examples">Examples</a> ·
   <a href="#tips-for-using-these-skills">Tips</a> ·
+  <a href="#explanations">Explanations</a> ·
   <a href="#orchestration">Orchestration</a> ·
   <a href="#license">License</a>
 </p>
@@ -198,7 +199,9 @@ Tools that read an `AGENTS.md` (Codex, etc.): copy [principles.md](principles.md
 </tr>
 </table>
 
-## The Problem
+## Explanations
+
+### The Problem
 
 <table>
 <tr><th align="left">📉&nbsp;&nbsp;Poor quality</th></tr>
@@ -209,7 +212,7 @@ We've all seen it, but I'll spell out the cascade. Agents are literally designed
 </td></tr>
 </table>
 
-## The Thesis
+### The Thesis
 
 <table>
 <tr><th align="left">💪&nbsp;&nbsp;Principles -> Quality</th></tr>
@@ -220,7 +223,7 @@ By emphasizing principles of software engineering that great engineers already u
 </td></tr>
 </table>
 
-## Motivation
+### Motivation
 
 <table>
 <tr><th align="left">🍼&nbsp;&nbsp;I hate babysitting</th></tr>
@@ -234,7 +237,7 @@ I devised these skills from obsessing over how to get more out of AI coding agen
 > [!IMPORTANT]
 > The vast majority of my waking hours in 2026 have been tirelessly dedicated to understanding coding agent's failures, and how to modify their behavior effectively. You can read about my experience of doing that work and the insights behind these rules in the [explanations.md](explanations.md) file. I strongly encourage everyone to do so.
 
-## Metrics
+### Metrics
 
 <table>
 <tr><th align="left">⏳&nbsp;&nbsp;Coming soon</th></tr>
