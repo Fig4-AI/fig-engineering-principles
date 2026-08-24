@@ -306,7 +306,7 @@ This suggestion has an expiration date on it, but if you're using Anthropic's Fa
 
 - **Use the skills freely, for anything** — including commercial work. Individuals and companies can use them to build and ship commercial products with no strings attached.
 - **Anything you build with the skills is entirely yours.** Code produced by agents guided by these skills carries no obligations under this license.
-- **What you may not do** is offer the skills themselves (or derivatives of them) as a product — packaging, bundling, reselling, or hosting them as part of a competing tool or service, paid or free. For licensing beyond these terms, contact abel.h.mcelroy@gmail.com.
+- **What you may not do** is offer the skills themselves (or derivatives of them) as a product — packaging, bundling, reselling, or hosting them as part of a competing tool or service, paid or free. For licensing beyond these terms, contact abel@fig4.com.
 
 <p align="center">
   <sub>Built by Abel McElroy · <a href="https://polyformproject.org/licenses/shield/1.0.0">PolyForm Shield 1.0.0</a> · <a href="#fig-the-fruit-of-knowledge">Back to top ↑</a></sub>
