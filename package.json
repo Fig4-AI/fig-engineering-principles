@@ -11,7 +11,7 @@
     "agents",
     "bin"
   ],
-  "license": "PolyForm-Shield-1.0.0",
+  "license": "PolyForm-Perimeter-1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelmcelroy/fig-engineering-principles.git"
