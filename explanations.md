@@ -243,7 +243,7 @@ But there's an even bigger problem beyond decorum at stake. Why was the software
 
 The bookend does serve a purpose. Skills are just shortcuts to prompts. An agent invoking a skill sees the content, but it's up to them to interpret where the beginning and end of the skill is. The beginning of the skill is easier, because the invocation of the skill is a tool call the agent has some awareness of. The end is not. Without a final bookend like the above line, it's up to the agent's interpretation to decide where the skill's content probably ended. Technically the bookend doesn't solve the problem; it just makes it much more obvious, especially when the skill began with that same bookend. It's not a normal "failure mode" but it does seem to send a stronger signal when the agent has absolutely no ambiguity whatsoever as to what the skill is. And I _think_ it makes it somewhat more official looking to the agent, which isn't bad considering the content.
 
---
+---
 
 # Meta stuff
 
