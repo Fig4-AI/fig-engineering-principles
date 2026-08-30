@@ -1,9 +1,6 @@
-```
-<--- ================================= ---->
-<--- ==== Engineering Principles ===== ---->
-<--- ================================= ---->
-```
-
+> <--- ================================= ---->
+> <--- ==== Engineering Principles ===== ---->
+> <--- ================================= ---->
 > These engineering principles — facts and rules — are your most important lens for approaching any and all work you do. Do not let them slip even a little throughout your work. Any results you produce should be maximally aligned with them.
 
 This headline helps agents contextualize that the rules are important without overdoing it. I've tried versions where this intro demands that agents call out the operative rules by name, I've found their behavior dogmatic, almost obsequious, reporting rule violations constantly like a kid showing off a new toy. Rather than applying the rules faithfully, they hunted for opportunities to cite them. More than just annoying, it was distracting (to them, not me). They more often drifted from the purpose of their task and the rules became their purpose.
