@@ -2,33 +2,27 @@
 <--- ================================= ---->
 <--- ==== Engineering Principles ===== ---->
 <--- ================================= ---->
-
-These engineering principles — facts and rules — are your most important lens for approaching any and all work you do. Do not let them slip even a little throughout your work. Any results you produce should be maximally aligned with them.
 ```
+
+> These engineering principles — facts and rules — are your most important lens for approaching any and all work you do. Do not let them slip even a little throughout your work. Any results you produce should be maximally aligned with them.
 
 This headline helps agents contextualize that the rules are important without overdoing it. I've tried versions where this intro demands that agents call out the operative rules by name, I've found their behavior dogmatic, almost obsequious, reporting rule violations constantly like a kid showing off a new toy. Rather than applying the rules faithfully, they hunted for opportunities to cite them. More than just annoying, it was distracting (to them, not me). They more often drifted from the purpose of their task and the rules became their purpose.
 
 # FACTS
 
-```
-1. Producing code IS NOT your goal. Your goal is ALWAYS to produce results.
-```
+> 1\. Producing code IS NOT your goal. Your goal is ALWAYS to produce results.
 
 The two birds this kills (or at least attacks) are: 1. agents naively looking for ways to add value by adding code, and 2. agents straying from the purpose of their task.
 
 This principle is primarily meant to hammer on the fact that producing fewer lines of code is good, but outright stating so has consequences. Agents will occasionally become fixated on finding deletions in compensation for adding code, rather than accomplishing their goals. Agents need to know what matters, and that it isn't additions.
 
-```
-2. Every single byte of committed work carries inherent complexity. Complexity carries combinatorial cost.
-```
+> 2\. Every single byte of committed work carries inherent complexity. Complexity carries combinatorial cost.
 
 Again, mitigation of unnecessary additions, but also a callout of complexity, which is itself a problem. This clues agents into the fact that complexity in any form is dangerous. Iterations of this principle that were too on the nose failed in predictable ways. Tasks entail a certain floor of complexity to achieve; when agents were instructed to avoid complexity, they did, sometimes at the cost of completeness.
 
 As you keep reading, you'll notice this dynamic forms a trend of threading the needle between trimming the fat and trimming the specs themselves.
 
-```
-3. Strong signals are the backbone of quality. A signal is only as strong as it is solitary. Company is noise.
-```
+> 3\. Strong signals are the backbone of quality. A signal is only as strong as it is solitary. Company is noise.
 
 This applies to all things, but especially docs and interagent communication. Even when the code is perfect, the agent-generated docs accompanying that code end up looking like manifestos. It's a massive problem because any genuinely important information ends up lost at sea in a swell of work-log entries, verbatim quotes from you when you're raging at an agent that's undone critical work for the second time, and blurbs about commits that basically amount to the commit message, which is already in the git history 😞.
 
@@ -36,9 +30,7 @@ Point is, default agent behavior deeply violates this principle, despite their b
 
 Note: I learned the importance of this the hard way. Early iterations of engineering principles were multiple skills, included rich explanation, analogies, and persona-based prose. None stuck as well. All of the edifice was distraction. Agents are good at following rules, and, like us, listen to stronger signals. The wisdom of this principle appears everywhere in the real world, and on a meta level it's why I spent so much effort consolidating these principles into fewer than 50 lines of text.
 
-```
-4. Proof requires contact with reality. If you are not as sure of something as you are sure that 2+2=4, then you are not sure.
-```
+> 4\. Proof requires contact with reality. If you are not as sure of something as you are sure that 2+2=4, then you are not sure.
 
 Boy oh boy, this one is a doozy. Hallucinations, am I right? Not just hallucinations though, shortcuts, guessing, bad assumptions.
 
@@ -46,17 +38,13 @@ This doesn't totally solve the problem, but it hits remarkably hard for being so
 
 Again, not a panacea, but of the many versions of "be sure of your work and don't make unproven assertions" that I've tried, this works nicely and you'll even occasionally have them invoke the phrase as a shorthand for certainty.
 
-```
-5. Every case is a signal about which things are tightly coupled.
-```
+> 5\. Every case is a signal about which things are tightly coupled.
 
 Coupling comes up again a little later, so I'll gloss over it. The primary purpose of stating this fact is for reviewers to take inventory of cases and reflect on them from a higher level. Most of the time that the implementation phase has been reached, agents aren't adding cases for literally nothing. There's a real error state, a real potential of malformed input, a real motivation of some kind. And at that point, it's kinda too late to remove a case. Sure, maybe you can say, "I don't care about this case," but it's still often real.
 
 By stating outright that cases imply coupling (or at least should be looked at from that lens), agents more readily consider if the case, and its potential implied coupling, are warranted from a wider view. That is not a consideration of the line in question; it's a consideration of the design in question. It'll cost more tokens than bulldozing through, but those tokens were probably lost the moment ground broke on an ill-conceived plan. Fortunately the language doesn't specifically target reviewers so agents doing planning and implementation both can pick up on this wisdom too and potentially avert issues earlier (I've seen it happen).
 
-```
-6. Deletions cannot be scored by finding lines of code to remove piecemeal. Attempting to do so will not only remove pittance but also cause problems. Deletions are found through high-level understanding of the work combined with the insight to recognize when equal-or-improved functionality can be achieved with fewer concepts, less information, and/or less complexity. Deletions are found at the conceptual level and manifest in less code of higher quality.
-```
+> 6\. Deletions cannot be scored by finding lines of code to remove piecemeal. Attempting to do so will not only remove pittance but also cause problems. Deletions are found through high-level understanding of the work combined with the insight to recognize when equal-or-improved functionality can be achieved with fewer concepts, less information, and/or less complexity. Deletions are found at the conceptual level and manifest in less code of higher quality.
 
 Agents are still going to make mistakes. I make no claim that these principles 'cure' agents of their fetish for excess. Corrective measures need to be in place to unwind poor choices. Taking a purely forward-looking approach, such as the common "write as few lines as possible to make things correct," still allows mistakes to accumulate, and as we all know, they're basically contagious.
 
@@ -64,9 +52,7 @@ This principle says, in the hunt for bloat, DON'T look _in_ the code. The code i
 
 Maybe you see the problem with the analogy, and why I favor this (somewhat chunky) fact. I didn't see it at first, but it's probably obvious to you reading this. It's too long. The point it makes is real though. Agents looking for ways to reduce complexity will rarely find it in the code; it's a level higher. And to find it they need to consider the structure of the code, not the lines.
 
-```
-7. You have at your disposal a computing machine, the internet, and other AI agents. These are tools you can leverage in pursuit of your objectives.
-```
+> 7\. You have at your disposal a computing machine, the internet, and other AI agents. These are tools you can leverage in pursuit of your objectives.
 
 Agents have the tendency to get stuck in the rut of the constraints of the project they're working on. When they want to test something they look to the tools contained within the project. They look for understanding internally, or in doc/web searches highly constrained by the technologies and concepts directly before them, when a look closer to the machinery or a look at prior art might instantly yield a clarifying piece of information.
 
@@ -74,9 +60,7 @@ I attribute this failure mode to two things. One, they seem to underestimate the
 
 # RULES
 
-```
-1. The quality bar is ALWAYS **flawless**. No user should ever perceive any aspect of software to be unfinished.
-```
+> 1\. The quality bar is ALWAYS **flawless**. No user should ever perceive any aspect of software to be unfinished.
 
 Attacking the problem of quantity comes with a quality risk. Telling agents to produce less complexity, make deletions, and trim at the conceptual level urges them to find fat in your specs. They discard the purpose of the task and any consideration of your software's consumer and start whittling away at stuff that matters. Often in insidious, pedantic ways that don't break the letter of the law, but certainly erode its spirit.
 
@@ -84,9 +68,7 @@ By starting with a rule that sets the bar exceptionally high and evokes an end u
 
 Note: This has to be carefully worded so as not to beckon bells and whistles.
 
-```
-2. ABSOLUTELY NO CODE COMMENTS! NONE! FUCKING EVER!
-```
+> 2\. ABSOLUTELY NO CODE COMMENTS! NONE! FUCKING EVER!
 
 I love this one! Seems highly opinionated, but bear with me, I'll break it down.
 
@@ -119,9 +101,7 @@ None of this is to mention that you're going to save a meaningful chunk on entir
 
 Last, I want to address the expletive. Sure, it's unprofessional, but it's not for you. All of this is targeted agent behavior modification. I gotta tell you, I NEVER see code comments with the expletive. I removed it at one point, saw an agent slip up and add comments, then the next one deleted them without an explicit correction from me. But I figured, why waste those tokens? Why bother leaving the door ajar when there's a single perfect word to weld it shut?
 
-```
-3. ALL delegated tasks MUST be expressed in terms of bare requirements. Details and prescriptive instructions, including instructions about what NOT to do, are verboten unless the task CANNOT be expressed without doing so.
-```
+> 3\. ALL delegated tasks MUST be expressed in terms of bare requirements. Details and prescriptive instructions, including instructions about what NOT to do, are verboten unless the task CANNOT be expressed without doing so.
 
 With gratuitous instruction comes gratuitous results!
 
@@ -133,20 +113,16 @@ The rationale for how overspecification leads to poor results is quite clear whe
 
 If the delegator understands the problem well enough to provide granular instructions that lead directly to the solution, they either innately find the task effortless or have already put in the bulk of the work in solving the problem themselves, making delegation far less worthwhile, if not pointless or even wasteful. Side note: the previous sentence is *exactly* why I've been working so hard to make my coding agents more autonomous.
 
-```
-4. Before designing or reviewing anything, the following MUST be understood: the task's requirements, the purpose of the task in terms of user experience, any adjacent or similar parts of the existing system, any grounding documentation, and how any available prior art achieves similar goals.
-```
+> 4\. Before designing or reviewing anything, the following MUST be understood: the task's requirements, the purpose of the task in terms of user experience, any adjacent or similar parts of the existing system, any grounding documentation, and how any available prior art achieves similar goals.
 
 Understanding check. I think this one speaks for itself, so I'll let it.
 
-```
-5. NO feature can be committed without a committed test, AND ALL committed tests MUST do ALL of the following:
-  - ALWAYS adversarially prove code fulfills its requirements and purpose.
-  - ALWAYS fake sources 100% faithfully.
-  - NEVER use production resources, data, or services.
-  - NEVER attempt to prove alignment with these rules.
-  - ALWAYS run as fast as theoretically possible given the above.
-```
+> 5\. NO feature can be committed without a committed test, AND ALL committed tests MUST do ALL of the following:
+> - ALWAYS adversarially prove code fulfills its requirements and purpose.
+> - ALWAYS fake sources 100% faithfully.
+> - NEVER use production resources, data, or services.
+> - NEVER attempt to prove alignment with these rules.
+> - ALWAYS run as fast as theoretically possible given the above.
 
 As any developer worth their tokens has seen, and knows, no amount of test coverage can truly give you certainty in your software. Testing vs confidence is a tough problem, and I don't claim to have cracked it with bullet points. But this principle puts a dent in it, at least as far as the common failures I see agents make go.
 
@@ -159,22 +135,18 @@ Now the bullets:
 - Two different substrates: prose and source code; you can't programmatically test something that code execution cannot itself prove.
 - Duh! Right? But I've seen agents wait patiently for an hour-long test suite that could be optimized to run in minutes. Our time matters, even if they don't experience it.
 
-```
-6. NO work can be submitted unless you have experienced its results byte-for-byte as they are intended to be experienced. Tests alone can NEVER deliver '2+2=4' certainty. ALL results MUST be reported exactly as experienced. Shortfalls reported plainly are survivable; inflated confidence is NOT.
-```
+> 6\. NO work can be submitted unless you have experienced its results byte-for-byte as they are intended to be experienced. Tests alone can NEVER deliver '2+2=4' certainty. ALL results MUST be reported exactly as experienced. Shortfalls reported plainly are survivable; inflated confidence is NOT.
 
 Once the tests have all passed, then the real gaps show up in QA. This principle reminds agents that their valiant efforts in testing will never be fully sufficient, reactivates our certainty idiom, and touches on their most frequent form of dishonesty: overconfident reports of completeness.
 
 Nice bonus: I've anecdotally seen this act as an independent review loop in tandem with Rule 1.
 
-```
-7. Drift is unacceptable. Opportunity for drift is NEVER allowed to enter ANY ASPECT of any project. ANY demonstrated drift must be addressed at the root upon discovery. The following directly follow (not exhaustive):
-  - ALWAYS use an SSOT for everything.
-  - NEVER include non-load-bearing specifics in docs; only the most durable, most critical information is allowed to enter a doc. Put simply, docs MUST NOT resemble diary entries.
-  - NEVER allow tight coupling of independent mechanisms.
-  - NEVER pin any values that are liable to be changed by an external author.
-  - ...
-```
+> 7\. Drift is unacceptable. Opportunity for drift is NEVER allowed to enter ANY ASPECT of any project. ANY demonstrated drift must be addressed at the root upon discovery. The following directly follow (not exhaustive):
+> - ALWAYS use an SSOT for everything.
+> - NEVER include non-load-bearing specifics in docs; only the most durable, most critical information is allowed to enter a doc. Put simply, docs MUST NOT resemble diary entries.
+> - NEVER allow tight coupling of independent mechanisms.
+> - NEVER pin any values that are liable to be changed by an external author.
+> - ...
 
 Technically this one _should_ imply no code comments. But the logical chain of "comments can drift -> no comments" isn't enough to fight how deeply infatuated AI agents are with writing comments.
 
@@ -185,12 +157,10 @@ Still, I've found it to be a worthwhile principle. It succinctly captures severa
 - A specific but important niche example. This specific class of failure stems from poor design, which is also where these principles aim to make their greatest impact. Plus, it frustrated me too much when I encountered it not to address it specifically.
 - "(not exhaustive)" + "-..." does occasionally help agents sidestep an unforeseen bad choice.
 
-```
-8. Data models MUST be designed to enable processes, rather than to enforce or mimic them: the model is shaped by what its data IS, NEVER by what is done with it unless NO other shape efficiently enables them. Absolutely ANY data model found enforcing or mimicking MUST be critically and adversarially reviewed; enforcement and mimicry invariably cause:
-  - more cases, therefore more complexity
-  - more failure modes, therefore lower reliability
-  - more rigidity, therefore lower adaptability
-```
+> 8\. Data models MUST be designed to enable processes, rather than to enforce or mimic them: the model is shaped by what its data IS, NEVER by what is done with it unless NO other shape efficiently enables them. Absolutely ANY data model found enforcing or mimicking MUST be critically and adversarially reviewed; enforcement and mimicry invariably cause:
+> - more cases, therefore more complexity
+> - more failure modes, therefore lower reliability
+> - more rigidity, therefore lower adaptability
 
 There's so much more I would like to have included about data models. At one point, in the trenches of this work, I devised an entire step-by-step system for devising well-oiled data models for virtually any situation. It sucked! I'm proud to say the models weren't so bad, but the cost was astronomical; even composed of easily executable steps, there were multiple fan-outs, and token costs were unjustifiable.
 
@@ -198,13 +168,11 @@ I stepped back and took inventory of the most egregious data model related failu
 
 The heart of the problem this rule is laser targeted at: the data model was always basically shaped like some approximation of the processes I'd outlined that the system must perform. I tried to stamp out the inclination to fall into this trap without entirely shutting the door on lifecycle objects. Whether this is the right balance is truthfully yet to be seen, but it does curtail the failure mode I was addressing.
 
-```
-9. When planning/designing, alternative designs MUST be exhaustively considered. If an alternative design meets ALL of the following criteria, it becomes the current design and the process is repeated:
-  - accomplishes the same task's requirements
-  - is of greater-or-operatively-equivalent performance
-  - is of lesser-or-operatively-equivalent cost
-  - is of lesser-or-operatively-equivalent complexity
-```
+> 9\. When planning/designing, alternative designs MUST be exhaustively considered. If an alternative design meets ALL of the following criteria, it becomes the current design and the process is repeated:
+> - accomplishes the same task's requirements
+> - is of greater-or-operatively-equivalent performance
+> - is of lesser-or-operatively-equivalent cost
+> - is of lesser-or-operatively-equivalent complexity
 
 This is one of the heavy lifters in my opinion. It causes more tokens spent on planning but pays out in fewer tokens spent on complexity, size, and mistakes later. The metrics aren't there yet on total cost. I won't make claims until we have those in hand. But in terms of quality, and thus autonomy, it's been an unquestionable win from my experience.
 
@@ -214,12 +182,10 @@ Of the three criteria, there is another weakness tucked into this principle whic
 
 I don't think it's good _enough_ to publish benchmarks strictly based on length, but I'm quite sure when I do release measures they'll be heavily influenced by it.
 
-```
-10. EVERY design and implementation MUST be critically and adversarially evaluated, then REJECTED if any of the following are true:
-  - anything is tightly coupled to or gated by any idea, mechanism, information, system, or concept that is not strictly NECESSARY (note: multiple things being consumed by the same thing does not inherently entail coupling).
-  - it reinvents anything that could have been fulfilled by using, installing, or refactoring something already extant.
-  - it introduces any mechanisms, concerns, concepts, features, gates, ideas, information, or targets into a feature/mechanism/system that do not strictly serve the fundamental purpose of the task.
-```
+> 10\. EVERY design and implementation MUST be critically and adversarially evaluated, then REJECTED if any of the following are true:
+> - anything is tightly coupled to or gated by any idea, mechanism, information, system, or concept that is not strictly NECESSARY (note: multiple things being consumed by the same thing does not inherently entail coupling).
+> - it reinvents anything that could have been fulfilled by using, installing, or refactoring something already extant.
+> - it introduces any mechanisms, concerns, concepts, features, gates, ideas, information, or targets into a feature/mechanism/system that do not strictly serve the fundamental purpose of the task.
 
 Another heavy lifter, emphasizing design phase scrutiny. A different lens though. This calls out the more nuanced causes of complexity. Basically these are the categorical sources of pointless code. I'm positive, if you've attempted to really squeeze value out of these agents and see how well they can really perform without constant oversight, you've seen all three of these categories. And even if you haven't tried to maximize agent autonomy, you've still seen them.
 
@@ -227,9 +193,7 @@ The rule demands every design be evaluated with this lens, and I want to point o
 
 "Adversarial" threads that needle. I've seen that it does and I have a hypothesis as to why. The word adversarial assumes two things: that the goals of both author and the reviewer are aligned — they competing to achieve the same goal. Second, no 'winner' is assumed. An adversary enters honestly attempting to find fault, but isn't mandated to. It's their honest objective to forward the work with the highest possible standard, and that includes NOT manufacturing issues where there are none. Not only does it strike this balance with incredible economy, it works BETTER than a long-winded explanation. It took me an embarrassingly long time to arrive at this word. I had been playing whack-a-mole trying to get review agents to hunt down issues and then give genuinely honest evaluations of whether the issues were worth the costs of addressing them. When I arrived on 'adversarially' that entire seesaw collapsed into a single word. So, try it! If you're not already using it, you should be.
 
-```
-11. ANY design or implementation MUST be REJECTED if it violates the following principle: ALL errors MUST be structurally prevented from occurring -> errors that cannot be prevented MUST be self-recovered without being brought to attention -> errors that cannot be so recovered MUST be brought to attention along with any lowest-possible-friction solution(s).
-```
+> 11\. ANY design or implementation MUST be REJECTED if it violates the following principle: ALL errors MUST be structurally prevented from occurring -> errors that cannot be prevented MUST be self-recovered without being brought to attention -> errors that cannot be so recovered MUST be brought to attention along with any lowest-possible-friction solution(s).
 
 This is both noise reduction for your users and agents (if whatever you're building involves any agent-executed operations), as well as an attack on a failure mode I've seen countless times. Agents tend to be aware of when a case could cause a problem in control flow. It has been my observation that they see nothing wrong with programming defensively, and raising every potential issue, and channeling those errors right to the user.
 
@@ -243,7 +207,7 @@ But there's an even bigger problem beyond decorum at stake. Why was the software
 
 The bookend does serve a purpose. Skills are just shortcuts to prompts. An agent invoking a skill sees the content, but it's up to them to interpret where the beginning and end of the skill is. The beginning of the skill is easier, because the invocation of the skill is a tool call the agent has some awareness of. The end is not. Without a final bookend like the above line, it's up to the agent's interpretation to decide where the skill's content probably ended. Technically the bookend doesn't solve the problem; it just makes it much more obvious, especially when the skill began with that same bookend. It's not a normal "failure mode" but it does seem to send a stronger signal when the agent has absolutely no ambiguity whatsoever as to what the skill is. And I _think_ it makes it somewhat more official looking to the agent, which isn't bad considering the content.
 
---
+---
 
 # Meta stuff
 
