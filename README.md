@@ -251,9 +251,9 @@ Measurements are tricky. Cherry picking a prompt and showing how little code it 
 ## Orchestration
 
 > [!IMPORTANT]
-> The [Fig orchestrator](https://www.fig4.ai) is coming soon:
+> The [Fig orchestrator](https://www.fig4.ai) is out!:
 > - **Free** to use!
-> - Use your own Anthropic account
+> - Use your own Tokens
 > - Spending visibility
 > - Work visibility
 > - Budget controls
@@ -262,7 +262,7 @@ Measurements are tricky. Cherry picking a prompt and showing how little code it 
 
 ## General Claude Code Advice
 
-I use Claude Code (not codex, cursor, copilot, ...). Here's some stuff I'd highly recommend you at least learn more about if you do too:
+I mostly use Claude Code. Here's some stuff I'd highly recommend you at least learn more about if you do too:
 
 <details>
 <summary><strong>1. NEVER AUTOCOMPACT!</strong></summary>

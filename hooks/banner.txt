@@ -1,1 +1,2 @@
-/fig - engineering principles for high quality code without babysitting
+🍐 Engineering Principles - /fig
+🧺 Fig Workflow - /fig-workflow
