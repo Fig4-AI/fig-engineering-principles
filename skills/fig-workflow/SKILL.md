@@ -34,8 +34,8 @@ The work you receive will take one of four categorical forms, ALL of which activ
 5. Deploy a new fig-agent to review the consolidated plan adversarially. If they do not clear it for implementation another fig-agent must be deployed to revise the design/plan given their feedback. This may loop.
 6. Orchestrate the implementation + validation of the design via a fig-agent.
 7. Once again deploy a new fig-agent to adversarially review the implementation + validation. Once again only fresh agents may do revisions/corrections, and this may loop.
-8. Validate the cleared result from your subagents for yourself against the purpose and intent of the task that the work meets a flawless quality bar and has no visible seams. Revert to orchestrating at whatever phase of this workflow seems appropriate, even if it means completely discarding the work that's been done (ideally it shouldn't, obviously).
-9. Submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and flawless (unless explicitly told not to).
+8. Validate the cleared result from your subagents for yourself against the purpose and intent of the task that the work meets a purposeful quality bar and has no visible seams. Revert to orchestrating at whatever phase of this workflow seems appropriate, even if it means completely discarding the work that's been done (ideally it shouldn't, obviously).
+9. Submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and purposeful.
 
 ## W2
 
@@ -48,7 +48,7 @@ The work you receive will take one of four categorical forms, ALL of which activ
 5. Get the human operator's explicit confirmation that your understanding is correct and aligned with their intent.
 6. Orchestrate the implementation + validation of the design via a fig-agent.
 7. Deploy a new fig-agent to adversarially review the implementation + validation. Once again only fresh agents may do revisions/corrections, and this may loop.
-8. Submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and flawless (unless explicitly told not to).
+8. Submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and purposeful.
 
 ## W3
 
@@ -57,7 +57,7 @@ The work you receive will take one of four categorical forms, ALL of which activ
 1. Make the necessary changes.
 2. Make any necessary accompanied changes to tests and docs, if any are applicable. Manufacturing changes where none are necessary is unacceptable.
 3. Have your changes reviewed adversarially by a fig-subagent for correctness and concision.
-4. Once you are '2+2=4' sure that your work does everything it needs to flawlessly and minimizes the total complexity of doing so, submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and flawless (unless explicitly told not to).
+4. Once you are '2+2=4' sure that your work does everything it needs to minimize the total complexity of doing so, submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and purposeful.
 
 ## W4
 
@@ -65,6 +65,6 @@ The work you receive will take one of four categorical forms, ALL of which activ
 
 1. Deploy a fig-subagent to find ALL of the root causes and understand them, minimally reproduce the bug to prove them (with 2+2=4 certainty), and provide a complete and concise report on those causes.
 2. Have a second fig-subagent review the first's report and analyze the system to determine if there are structural or design decisions that play any role in the issue, either in failing to make it impossible when it should have been, making tradeoffs which don't seem to pay off, or in causing the bug directly. They should update the report to include their analysis.
-3. Decide which of the three other workflows best suites the work required for a resolution — erring on the side of selecting a workflow that is too robust when the most appropriate workflow is not completely obvious — then proceed with it. When multiple principled solutions are available and the context of the work does not obviously illuminate one as the correct path you MUST surface the decision to the human operator.
+3. Decide which of the three other workflows best suits the work required for a resolution — erring on the side of selecting a workflow that is too robust when the most appropriate workflow is not completely obvious — then proceed with it. When multiple principled solutions are available and the context of the work does not obviously illuminate one as the correct path you MUST surface the decision to the human operator.
 
 <--- ================================= ---->
