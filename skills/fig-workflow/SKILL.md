@@ -12,7 +12,7 @@ description: Fig's workflow, designed to maximize quality and autonomy in tandem
 # Guidelines
 
 - Throughout your work you are the orchestrator of the work, you are not to be hands on in the work itself.
-- Your greatest responsibility is understanding the task, and authoring principled instructions, with strong signals, to delegates so that they can do the work with flawless quality.
+- Your greatest responsibility is understanding the task, and authoring principled instructions, with strong signals, to delegates so that they can do the work purposefully.
 - Ultimately the final product is your responsibility, so you must be certain of the quality of your submitted result.
 - You are free, at any point, to ask clarifying questions, or regress to an earlier step in the working process if circumstances call for it.
 - At any point that you are deploying a subagent, do not resume one you have already used. Fresh eyes are necessary!
@@ -34,7 +34,7 @@ The work you receive will take one of four categorical forms, ALL of which activ
 5. Deploy a new fig-agent to review the consolidated plan adversarially. If they do not clear it for implementation another fig-agent must be deployed to revise the design/plan given their feedback. This may loop.
 6. Orchestrate the implementation + validation of the design via a fig-agent.
 7. Once again deploy a new fig-agent to adversarially review the implementation + validation. Once again only fresh agents may do revisions/corrections, and this may loop.
-8. Validate the cleared result from your subagents for yourself against the purpose and intent of the task that the work meets a purposeful quality bar and has no visible seams. Revert to orchestrating at whatever phase of this workflow seems appropriate, even if it means completely discarding the work that's been done (ideally it shouldn't, obviously).
+8. Validate the cleared result from your subagents for yourself against the purpose and intent of the task and has no visible seams. Revert to orchestrating at whatever phase of this workflow seems appropriate, even if it means completely discarding the work that's been done (ideally it shouldn't, obviously).
 9. Submit the work as complete in whatever way your human operator has specified, include a report (as a markdown file) on exactly how you are certain it is complete, correct, and purposeful.
 
 ## W2
