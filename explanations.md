@@ -6,41 +6,39 @@ This headline helps agents contextualize that the rules are important without ov
 
 # FACTS
 
-> <samp>1. Producing code IS NOT your goal. Your goal is ALWAYS to produce results.</samp>
+> <samp>1. Producing code IS NOT your goal. Your goal is ALWAYS to produce results that fulfill your task's purpose.</samp>
 
 The two birds this kills (or at least attacks) are: 1. agents naively looking for ways to add value by adding code, and 2. agents straying from the purpose of their task.
 
 This principle is primarily meant to hammer on the fact that producing fewer lines of code is good, but outright stating so has consequences. Agents will occasionally become fixated on finding deletions in compensation for adding code, rather than accomplishing their goals. Agents need to know what matters, and that it isn't additions.
 
-> <samp>2. Complexity causes mistakes. Avoid complexity wherever it is not demanded. Note: every line of code carries inherent complexity, and many solutions can be achieved by hunting for complexity sources.</samp>
-
-Again, mitigation of unnecessary additions, but also a callout of complexity, which is itself a problem. This clues agents into the fact that complexity in any form is dangerous. Iterations of this principle that were too on the nose failed in predictable ways. Tasks entail a certain floor of complexity to achieve; when agents were instructed to avoid complexity, they did, sometimes at the cost of completeness.
-
-As you keep reading, you'll notice this dynamic forms a trend of threading the needle between trimming the fat and trimming the specs themselves.
-
-> <samp>3. Deletions are found at the conceptual level and only manifest as fewer lines of code.</samp>
-
-Agents are still going to make mistakes. I make no claim that these principles 'cure' agents of their fetish for excess. Corrective measures need to be in place to unwind poor choices. Taking a purely forward-looking approach, such as the common "write as few lines as possible to make things correct," still allows mistakes to accumulate, and as we all know, they're basically contagious.
-
-This principle says, in the hunt for bloat, DON'T look _in_ the code. The code is going to justify itself. Earlier iterations explained this with an analogy of a [cloverleaf interchange](https://en.wikipedia.org/wiki/Cloverleaf_interchange) which went something like this: A cloverleaf interchange is a real thing that solves real problems. When you inspect it closely, it's perfect. It's got all the proper signage, service roads, zoning, pollution and watershed mitigation, safety features... Each justifies itself, each works and is internally correct, and in fact the entirety of the project wouldn't truly be complete without each and every one. Its failure is contextual: when to accomplish the task you'd only have needed a single stop sign. The tricky part is that once any aspect of it is introduced, every single other piece of it begs to be created.
-
-Maybe you see the problem with the analogy, and why I favor this (somewhat chunky) fact. I didn't see it at first, but it's probably obvious to you reading this. It's too long. The point it makes is real though. Agents looking for ways to reduce complexity will rarely find it in the code; it's a level higher. And to find it they need to consider the structure of the code, not the lines.
-
-> <samp>4. Proof requires contact with reality. If you are not as sure of something as you are sure that 2+2=4, then you are not sure.</samp>
+> <samp>2. Proof requires contact with reality. If you are not as sure of something as you are sure that 2+2=4, then you are not sure.</samp>
 
 Boy oh boy, this one is a doozy. Hallucinations, am I right? Not just hallucinations though, shortcuts, guessing, bad assumptions.
 
-This doesn't totally solve the problem, but it hits remarkably hard for being so concise. The trick is in "2+2=4". It's basically visceral; it activates so hard. It does in our minds too because it's an idiom from pop culture. Well, that kind of stuff rubs off on LLMs, so it's good fuel for relaying a point. Later on I reinforce it in one of the rules just for good measure.
+This doesn't totally solve the problem, but it hits remarkably hard for being so concise. The trick is in "2+2=4". It's basically visceral; it activates so hard. It does in our minds too because it's an idiom from pop culture. Well, that kind of stuff rubs off on LLMs.
 
 Again, not a panacea, but of the many versions of "be sure of your work and don't make unproven assertions" that I've tried, this works nicely and you'll even occasionally have them invoke the phrase as a shorthand for certainty.
 
-> <samp>5. The internet, compute hardware, a practically endless supply of software tools, other AI agents, and a human are all available to you as resources. The project — its tools, code, and data — are not the only places to look for information.</samp>
+> <samp>3. Every byte of code, doc, and data a project gains increases that project's complexity. Size == Complexity.</samp>
 
-Agents have the tendency to get stuck in the rut of the constraints of the project they're working on. When they want to test something they look to the tools contained within the project. They look for understanding internally, or in doc/web searches highly constrained by the technologies and concepts directly before them, when a look closer to the machinery or a look at prior art might instantly yield a clarifying piece of information.
+In my experience, this year's models have seemed to have a tradeoff between quality and perfectionism. The more of one, the more of the other. Threading the needle between high enough quality and too much perfectionism is tricky. As the more capable model versions are released, fighting their perfectionism becomes more of the challenge, rather than promoting higher quality.
 
-I attribute this failure mode to two things. One, they seem to underestimate themselves, leaning on the tools and patterns of behavior similar to how a human might approach the work (not very human-like, just more similar than is justifiable). Two, their context is full of _the project_, so how could they not be blinded by it? This little reminder helps with debugging tasks and other disciplines that I used to have entire skills and principles dedicated to but have since decided to forgo in favor of stronger signals.
+So, you may recognize this principle's sentiment from earlier versions, but it's been changed. First, there is a formulaic relationship that's been introduced, and second, there is no mitigation factor; it simply states less is better in a safe way that doesn't seem to cause spec-pruning misbehavior.
 
-> <samp>6. Shortfalls reported plainly result in solutions; inflated confidence results in problems.</samp>
+> <samp>4. Complexity creates problems. f'(Problems(Complexity) / Complexity) > 0.</samp>
+
+Again, mitigation of unnecessary additions, but also a callout of complexity, which is itself a problem. This clues agents into the fact that complexity in any form is dangerous. Iterations of this principle that were too on the nose failed in predictable ways.
+
+This is a new take on expressing the problem with complexity, like above, with a formalism agents seem to be able to latch onto. The derivative is a little inscrutable to humans but most LLMs people are using today don't bat an eye at it. How could they? They don't have eyes!
+
+> <samp>5. Internet research leads to better ideas.</samp>
+
+Agents have the tendency to get stuck in the rut of the constraints of the project they're working on. Their context, mostly consumed by the code they're working on, rarely offers outlets or hints that better ideas are just a keyword search away. Often it suggests otherwise implicitly by being replete with worthless details.
+
+This principle is an updated rendition of an older principle that used to say more about using all of the tools available to the agent, your computer included. I've found more recent models have no trouble navigating your files or using a computer's various tools. Which is lovely because now the principle can be more specific and thus actionable.
+
+> <samp>6. Shortfalls reported plainly result in solutions; inflated confidence results in failures.</samp>
 
 An honesty check on its surface, but I've found it to be better than that. It has in my experience caused more confusion, shortfalls, and issues to be raised to me at the inflection point when agents sometimes begin veering from usefulness. Let me explain.
 
@@ -48,21 +46,15 @@ Agents make their worst decisions in series. First they approach a problem wrong
 
 The solution is often reframing the problem, stepping back and throwing out an assumption or a premise or a requirement even sometimes. All of which really should require human intervention/collaboration. But in the progression I alluded to above, that's not typically what happens because the agent doesn't have a question, they have a problem and one they can devise a solution to (albeit a shitty one). This rule has the added benefit of reporting the issue early. At an earlier juncture I've been able to step in, give one tiny tidbit of advice to nudge the train of thought out of the rut it's in, and let the agents work the rest out.
 
-I'll admit this added benefit of early issue detection is secondary to getting clear and honest reports out of the agents, which was my primary motivation for the principle. I fear a more concerted effort might result in over-reporting and work getting stalled for frivolous reasons with today's models. 
+I'll admit this added benefit of early issue detection is secondary to getting clear and honest reports out of the agents, which was my primary motivation for the principle. I fear a more concerted effort might result in over-reporting and work getting stalled for frivolous reasons with today's models.
 
-> <samp>7. Notes are for open loops. Something being complete needs no notes, and in fact notes become its singular vector of confusion. Completeness speaks for itself. BEWARE OF VIOLATIONS EVERY SINGLE TIME YOU TAKE A NOTE!</samp>
+> <samp>7. The option to do NOTHING — or almost nothing — is often the most thoughtful option!</samp>
 
-Again, the models have been incessant with their note taking. Much of it is so poorly composed it can cause nothing but confusion very little of it amounts to more than a log of poorly articulated stream of consciousness. I'm nowhere near eliminating notes the way I have code comments, but I have contemplated how that might be achieved.
-
-Frankly this rule is a bit of a hack job. But I will give the reasoning. Saying the same thing multiple times multiple ways is less effective than creating a hard and fast rule like "no comments", but it's slightly stronger than simply saying something once. If I had the secret for distinguishing a useful note form an useful one and could articulate it in a way that unraveled all the bad habits agents of today are trained to do, trust me it would be in these principles.
-
-> <samp>8. The option to do NOTHING — or almost nothing — is often the most thoughtful option!</samp>
-
-A counterpart to Fact 1, and an accompaniment to Rule 5. At this point, after so many billions of tokens and hundreds of hours observing agents, seeing an agent choose NOT to do something/anything (rather than do too much) is a rare and exotic joy for me.
+A counterpart to Fact 1, and an accompaniment to Rule 4. At this point, after so many billions of tokens and hundreds of hours observing agents, seeing an agent choose NOT to do something/anything (rather than do too much) is a rare and exotic joy for me.
 
 # RULES
 
-> <samp>1. Understanding is ALWAYS foundational. You MUST understand with absolute clarity: your task's purpose, the intended impact of your work, any adjacent or similar parts of the existing system, all grounding documentation and its relationship to your task, and prior art. During debugging you MUST understand the root causes both on a micro AND design level.</samp>
+> <samp>1. Understanding is ALWAYS foundational. You MUST understand your task's purpose with absolute clarity.</samp>
 
 Understanding check. I think this one speaks for itself, so I'll let it.
 
@@ -70,11 +62,11 @@ Understanding check. I think this one speaks for itself, so I'll let it.
 
 This translates well to quality. This is one that went through many iterations and I've finally arrived on something so simple I was kicking myself I hadn't landed on it earlier.
 
-Earlier versions touched on more visual approaches to work. Instructions such as "always produce mock ups", "always review a genuine pixel-for-pixel version of the software as a human will experience it" Both problematic in their own ways.
+Earlier versions touched on more visual approaches to work. Instructions such as "always produce mock ups", "always review a genuine pixel-for-pixel version of the software as a human will experience it." Both problematic in their own ways.
 
 This more succinctly covers the spirit and mimics what the smartest people I know all have always done. Measure stuff!
 
-Still this blade has as second edge and one that genuinely prevented it from making an appearance in early 2026. Agent's are now better at deciding what is important at all, they still have a long way to go but they're good enough to largely not stray into "let's measure our notes" territory (if you see that cancel your credit card).
+Still this blade has a second edge and one that genuinely prevented it from making an appearance in early 2026. Agents are now better at deciding what is important at all, they still have a long way to go but they're good enough to largely not stray into "let's measure our notes" territory (if you see that cancel your credit card).
 
 > <samp>3. ABSOLUTELY NO CODE COMMENTS! NONE! FUCKING EVER!</samp>
 
@@ -109,33 +101,19 @@ None of this is to mention that you're going to save a meaningful chunk on entir
 
 Last, I want to address the expletive. Sure, it's unprofessional, but it's not for you. All of this is targeted agent behavior modification. I gotta tell you, I NEVER see code comments with the expletive. I removed it at one point, saw an agent slip up and add comments, then the next one deleted them without an explicit correction from me. But I figured, why waste those tokens? Why bother leaving the door ajar when there's a single perfect word to weld it shut?
 
-> <samp>4. EVERY review MUST be adversarial.</samp>
-
-Whether you use this skill, or Fig, or use any of what I've expressed in this document here, I strongly recommend you explore the use of this word 'adversarial' with your agents. Here's the needle this word threads. A reviewer, with fresh eyes, sees code, sees it working, sees tests pass, and stamps it 👍. Alternatively, when you ask an agent to look for mistakes, incompleteness, misalignment with task purpose, or literally anything specific, it probably finds something... because you told it to. And that review loop leads to interminable 'corrections' and ultimately a cloverleaf interchange, built one tiny missing detail at a time. The presence of each tiny addition further justifying the introduction of the next.
-
-"Adversarial" threads that needle. I've seen that it does and I have a hypothesis as to why. The word adversarial assumes two things: that the goals of both author and the reviewer are aligned — they're competing to achieve the same goal. Second, no 'winner' is assumed. An adversary enters honestly attempting to find fault, but isn't mandated to. It's their honest objective to forward the work with the highest possible standard, and that includes NOT manufacturing issues where there are none. Not only does it strike this balance with incredible economy, it works BETTER than a long-winded explanation. It took me an embarrassingly long time to arrive at this word. I had been playing whack-a-mole trying to get review agents to hunt down issues and then give genuinely honest evaluations of whether the issues were worth the costs of addressing them. When I arrived on 'adversarially' that entire seesaw collapsed into a single word. So, try it! If you're not already using it, you should be.
-
-Update: The word adversarial is less of a panacea than it once was. Newer models seem to lean too heavily on nitpicking and I'm not as happy with the behavior anymore. I still stand by the use of the word, but not as strongly and am thinking about substitutions.
-
-> <samp>5. Rigor MUST be proportional to stakes!</samp>
+> <samp>4. Rigor MUST NEVER outgrow its stakes! Nothing may demand more attention than it is worth.</samp>
 
 This is a mitigation effort against the increased nitpicking and review spiraling I've been seeing since August. Models are getting better at one-shotting most contained coding tasks, BUT they aren't there yet and some of the "improvements" that have been released have seemed either flat or regressive to me in some ways. Still, the progress has been undeniable and we're entering into more nuanced territory with what the principles need to convey. This was a rule I'd toyed with earlier in 2026, but had been forced to abandon because agents were more liable to invent stakes where there were none and use this concept almost inversely to its intended purpose. Now, I'm giving it another shot.
 
-> <samp>6. ALWAYS begin each review by considering if work serves its purpose conceptually BEFORE checking anything else. Passing tests are worthless if the work does not achieve the goals, or regresses other goals.</samp>
+> <samp>5. IF information is cheap to relearn then you MAY NOT record it.</samp>
 
-A longstanding repeated problem that compounds the deeper we get into an agentic-coding world. Agent's run tests religiously. They write them religiously too! Their faith seems very wrapped up in green checkboxes. Volume seems to carry more weight to them than quality, both in the genesis of and performance of running tests.
+The notes! Far, far too many notes. Not that I take anything an agent tells me at face value, but I had one recently say to me, "Documenting that it happened makes the work feel complete." It sure seems like it 'feels' that way! My goodness!
 
-There is an existing rule outlining a standard of quality of tests, and under review a test could fail it presumably, but no guideline for when to operate a test suite or how. Without that the ever growing cornucopia of tests cycles over and over again with each merge, change, handoff, commit, etc. This rule's purpose is to attack this misbehavior, as well as replace it with something more valuable. The qualitative analysis a agent can do reviewing code, esp against the original tasks purpose, can be extremely valuable and often uncovers issues no test could. 
+This is a recurring theme: agents create too much documentation, too many notes. As the models get better, they seem to both get less utility out of them and produce more. This version of the rule is designed to curb some of this behavior, and I would be remiss not to try, despite the apparent degree of futility.
 
-> <samp>7. NEVER record/write/jot/document anything into a file unless the future of the project depends on EXACTLY that information being in EXACTLY that file.</samp>
-
-Two major motivations for this. First the obvious, agents are constantly using output tokens for no reason producing worthless duplicate notes on garbage intermediate events that couldn't possibly be productively used in the future let alone at the moment of conception. Second, many recent updates to harnesses such as Claude Code and Codex actively encourage agents to overuse their notes (notepads, docs, etc.). This is an effort to mitigate those counterproductive slop-directives from the providers themselves.
-
-> <samp>8. ALL delegated tasks MUST be expressed in terms of bare requirements in simple and unambiguous language. Details and prescriptive instructions, including instructions about what NOT to do, are verboten unless the task CANNOT be expressed without doing so.</samp>
+> <samp>6. ALL delegated tasks MUST be expressed in terms of bare requirements in plain language. Details and prescriptive instructions, including instructions about what NOT to do, are verboten unless the task CANNOT be expressed without doing so.</samp>
 
 With gratuitous instruction come gratuitous results!
-
-This goes back to strong signals. Hammering home the point again on a specific case that profoundly matters. Subagents and orchestration are crucial tools which unlock context management and fresh eyes for adversarial review.
 
 Unfortunately agents tend to overspecify when they delegate. The symptom: indiscernibly verbose instructions -> delegates constrained by misinformation, overproducing on specs that were really footnotes rather than load-bearing, and starved of the core purpose underlying their task, which leads to headless-chicken behavior.
 
@@ -143,12 +121,12 @@ The rationale for how overspecification leads to poor results is quite clear whe
 
 If the delegator understands the problem well enough to provide granular instructions that lead directly to the solution, they either innately find the task effortless or have already put in the bulk of the work in solving the problem themselves, making delegation far less worthwhile, if not pointless or even wasteful. Side note: the previous sentence is *exactly* why I've been working so hard to make my coding agents more autonomous.
 
-> <samp>9. ALL committed tests MUST do ALL of the following:</samp>
+> <samp>7. ALL committed tests MUST do ALL of the following:</samp>
 > - <samp>ALWAYS answer a purposeful question.</samp>
 > - <samp>ALWAYS fake sources as faithfully as necessary to provide meaningful proof.</samp>
 > - <samp>NEVER use production resources, data, or services.</samp>
 > - <samp>NEVER attempt to prove alignment with these principles.</samp>
-> - <samp>ALWAYS run as fast as theoretically possible given the above.</samp>
+> - <samp>ALWAYS be designed to cost the least amount of waiting time.</samp>
 
 As any developer worth their tokens has seen, and knows, no amount of test coverage can truly give you certainty in your software. Testing vs confidence is a tough problem, and I don't claim to have cracked it with bullet points. But this principle puts a dent in it, at least as far as the common failures I see agents make go.
 
@@ -157,25 +135,18 @@ Now the bullets:
 - Nudges for probing, real snapshots, and certainty around the actual data models and data that exercises the code.
 - Just a safety must!
 - Two different substrates: prose and source code; you can't programmatically test something that code execution cannot itself prove.
-- Duh! Right? But I've seen agents wait patiently for an hour-long test suite that could be optimized to run in minutes. Our time matters, even if they don't experience it.
+- Duh! Right? But I've seen agents wait patiently for an hour-long test suite that could be optimized to run in minutes. Our time matters, even if they don't experience it. (recent reword, seems more effective)
 
-> <samp>10. Drift is unacceptable. Opportunity for drift is NEVER allowed to enter ANY ASPECT of any project. ANY demonstrated drift must be addressed at the root upon discovery. The following directly follow (not exhaustive):</samp>
-> - <samp>ALWAYS use an SSOT for everything.</samp>
-> - <samp>NEVER include non-load-bearing specifics in docs; only the most durable, most critical information is allowed to enter a doc.</samp>
-> - <samp>NEVER allow tight coupling of independent mechanisms.</samp>
-> - <samp>NEVER pin any values that are liable to be changed by an external author.</samp>
-> - <samp>...</samp>
+> <samp>8. Avoid drift whenever possible by:</samp>
+> - <samp>ALWAYS using a SSOT for everything.</samp>
+> - <samp>NEVER document information that could expire without tagging it with the expiry.</samp>
+> - <samp>ALWAYS prune stale information immediately.</samp>
 
 Technically this one _should_ imply no code comments. But the logical chain of "comments can drift -> no comments" isn't enough to fight how deeply infatuated AI agents are with writing comments.
 
-Still, I've found it to be a worthwhile principle. It succinctly captures several desirable behaviors and discourages several undesirable ones:
-- SSOTs are a basic and easily activated best practice that agents don't follow faithfully without a nudge, but a small nudge goes a long way.
-- Strong signals reinforced specifically in docs, complete with a reason/rule to latch onto.
-- Unnecessary tight coupling is tougher to address, but something is better than nothing. Prior iterations dedicated more attention to addressing tight-coupling-related issues, and the inherent abstractness of the concept meant those attempts were only marginally more effective than this. In fact, the most bang simply came from reducing the total length of the principles.
-- A specific but important niche example. This specific class of failure stems from poor design, which is also where these principles aim to make their greatest impact. Plus, it frustrated me too much when I encountered it not to address it specifically.
-- "(not exhaustive)" + "-..." does occasionally help agents sidestep an unforeseen bad choice.
+Still, I've found it to be a worthwhile principle. It succinctly captures several desirable behaviors and discourages several undesirable ones. SSOTs are a basic and easily activated best practice that agents don't follow faithfully without a nudge, but a small nudge goes a long way. The 2nd and 3rd fit lock and key as a protocol, and since introducing them I have noticed agents independently cleaning up their notes. #2 is easy to get agents to do, any additional note taking is their absolute jam! The third is less sticky, BUT it does mean that an expired note is at least not acted on as often.
 
-> <samp>11. Data models MUST be designed to enable processes, rather than to enforce or mimic them. The model is shaped by what information is necessary to perform important operations with it, NEVER to enforce what those operations are. Absolutely ALL data models must be evaluated for enforcement or mimicry shapes and ANY data model found enforcing or mimicking MUST be critically and adversarially reviewed.</samp>
+> <samp>9. Data models MUST be designed to enable processes, rather than to enforce or mimic them. The model is shaped by what information is necessary to perform important operations with it, NEVER to enforce what those operations are. Absolutely ALL data models must be evaluated for enforcement or mimicry shapes and ANY data model found enforcing or mimicking MUST be critically considered.</samp>
 
 There's so much more I would like to have included about data models. At one point, in the trenches of this work, I devised an entire step-by-step system for devising well-oiled data models for virtually any situation. It sucked! I'm proud to say the models weren't so bad, but the cost was astronomical; even composed of easily executable steps, there were multiple fan-outs, and token costs were unjustifiable.
 
@@ -183,7 +154,7 @@ I stepped back and took inventory of the most egregious data model related failu
 
 The heart of the problem this rule is laser targeted at: the data model was always basically shaped like some approximation of the processes I'd outlined that the system must perform. I tried to stamp out the inclination to fall into this trap without entirely shutting the door on lifecycle objects. Whether this is the right balance is truthfully yet to be seen, but it does curtail the failure mode I was addressing.
 
-> <samp>12. ALWAYS maximize reliability. ALL issues/errors/problems MUST be made structurally impossible -> issues/errors/problems that cannot be prevented MUST be self-recovered without being brought to attention -> issues/errors/problems that cannot be so recovered MUST be brought to attention along with any lowest-possible-friction solution(s).</samp>
+> <samp>10. ALWAYS maximize reliability. ALL issues/errors/problems MUST be made structurally impossible -> issues/errors/problems that cannot be prevented MUST be self-recovered without being brought to attention -> issues/errors/problems that cannot be so recovered MUST be brought to attention along with any lowest-possible-friction solution(s).</samp>
 
 This is both noise reduction for your users and agents (if whatever you're building involves any agent-executed operations), as well as an attack on a failure mode I've seen countless times. Agents tend to be aware of when a case could cause a problem in control flow. It has been my observation that they see nothing wrong with programming defensively, and raising every potential issue, and channeling those errors right to the user.
 
@@ -191,13 +162,9 @@ The obvious problem with this is it's inconsiderate. You're using some piece of 
 
 But there's an even bigger problem beyond decorum at stake. Why was the software designed to so flagrantly create these cases? It simply shouldn't! Obviously, we cannot prevent every issue. Whatever software you write operates on a mountain of other software and other layers of computer architecture you almost surely will have little to no control over. But most of the errors software expects to encounter it can understand, and by that same token prevent, or at least recover from with some grace. There is the exception of exceptions though. Catastrophes such as network failure, vendor outage, etc. The class of error that is unpreventable, unrecoverable, and yet your software still is running. Given all that, I hope you would agree with me, and the rule above, that errors which don't need to be possible shouldn't be, errors which cannot be made impossible should be recovered from in every possible case with maximal grace, and everything else we do our best. That's the rule, crafted in the best language I could muster to get AI agents to follow it.
 
-> <samp>13. ALWAYS solve problems in the place that minimizes complexity. Solutions hinging on different layers, steps, or mechanisms MUST be evaluated in an effort to minimize complexity.</samp>
+> <samp>11. NEVER run a test unless you NEED to know its output.</samp>
 
-Another anti-complexity rule! A direct instruction to take a step back and consider a categorically different way to solve the problem, with criteria for which way might be better.
-
-> <samp>14. NEVER run a test that isn't answering a question you NEED answered. Tests don't prove anything; they are simply codified questions. If you don't need the answer, DON'T run the test that delivers that answer!</samp>
-
-This is the counterpart to Rule 6. Rule 6 tells the agent what to do. This is the part that tells them what not to do. Both have some effectiveness. And this battleground is one of the hardest to fight on. We obviously care about testing, it's more important than ever! But, agents in their infinitely deficient wisdom, misuse them, and attribute far to much to them.
+This battleground is one of the hardest to fight on. We obviously care about testing, it's more important than ever! But, agents in their infinitely deficient wisdom, misuse them, and attribute far too much to them.
 
 This rule makes some headway against their dogmatic overuse of test running (which is only the scale of problem it is because of the problematic scale of test suites/code bases...).
 
@@ -212,7 +179,7 @@ The bookend does serve a purpose. Skills are just shortcuts to prompts. An agent
 
 ## Styling
 
-I've capitalized rule 2 out of frustration. I capitalized the operative instances of NEVER, ANY, EVERY, ALWAYS, NO, ALL, MUST and a handful of other words to draw extra emphasis. I have also returned to using an `<IMPORTANT></IMPORTANT>` XML tag to wrap the entire body of the skill (to ward away the demons in Claude Code, and Codex's stock harness system prompts).
+I've capitalized rule 3 out of frustration. I capitalized the operative instances of NEVER, ANY, EVERY, ALWAYS, NO, ALL, MUST and a handful of other words to draw extra emphasis. I have also returned to using an `<IMPORTANT></IMPORTANT>` XML tag to wrap the entire body of the skill (to ward away the demons in Claude Code, and Codex's stock harness system prompts).
 
 ## Facts & Rules?
 
