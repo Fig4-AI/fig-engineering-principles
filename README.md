@@ -274,29 +274,11 @@ Don't even approach 100% context. Imagine all the tokens you'll spend in a sessi
 </details>
 
 <details>
-<summary><strong>2. Turn off automemory.</strong></summary>
+<summary><strong>2. Turn off memory.</strong></summary>
 
 <br>
 
 It's ass. It seems nice at first when agents magically know stuff that you want them to know, but the feature is additive and has no protocol for reaping/pruning stale information. Over time you'll find it wastes context and confuses agents more than it helps.
-
-</details>
-
-<details>
-<summary><strong>3. Use <code>--dangerously-skip-permissions</code>.</strong></summary>
-
-<br>
-
-It IS dangerous. But the biggest danger is YOU. If you're wearing the paint off your enter key, consider how your use of the tool left you with so little confidence in its behavior.
-
-</details>
-
-<details>
-<summary><strong>4. Consider purity checks.</strong></summary>
-
-<br>
-
-This suggestion has an expiration date on it, but if you're using Anthropic's Fable model and are annoyed by the false-positives in their safety check that degrades Fable agents to Opus try this: Have your Fable agent delegate their work -> have them instruct delegates to submit their final reports in files and only send a neutral final message containing almost no content, only pointing at those files -> when subagents finish have the delegator agent grep those subagent session files specifically for the models which were used on each message, nothing else. If the messages are purely Fable, it can read the files, if not it holds for you. Annoying but it will save you from poisoning conversations and work unnecessarily.
 
 </details>
 
