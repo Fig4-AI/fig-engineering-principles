@@ -1,6 +1,12 @@
+<p align="center">
+  <a href="https://www.fig4.ai"><img src="assets/logo.svg" width="112" alt="Fig logo"></a>
+</p>
+
 <h1 align="center">Fig</h1>
 
 <p align="center"><em>Engineering principles for high quality code without babysitting.</em></p>
+
+<p align="center"><a href="https://www.fig4.ai"><strong>www.fig4.ai</strong></a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/fig-engineering-principles"><img src="https://img.shields.io/npm/v/fig-engineering-principles" alt="npm version"></a>
@@ -291,5 +297,5 @@ It's ass. It seems nice at first when agents magically know stuff that you want 
 - **What you may not do** is offer the skills themselves (or derivatives of them) as a product — packaging, bundling, reselling, or hosting them as part of a competing tool or service, paid or free. For licensing beyond these terms, contact abel@fig4.com.
 
 <p align="center">
-  <sub>Built by Abel McElroy · <a href="https://polyformproject.org/licenses/perimeter/1.0.1">PolyForm Perimeter 1.0.1</a> · <a href="#fig-the-fruit-of-knowledge">Back to top ↑</a></sub>
+  <sub>Built by Abel McElroy · <a href="https://polyformproject.org/licenses/perimeter/1.0.1">PolyForm Perimeter 1.0.1</a> · <a href="#fig">Back to top ↑</a></sub>
 </p>
